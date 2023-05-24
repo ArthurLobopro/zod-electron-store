@@ -1,8 +1,8 @@
-import {Except} from 'type-fest';
-import Conf, {Schema as ConfSchema, Options as ConfOptions} from 'conf';
+import Conf, { Options as ConfOptions, Schema as ConfSchema } from 'conf-with-zod'
+import { Except } from 'type-fest'
 
 declare namespace ElectronStore {
-	type Schema<T> = ConfSchema<T>;
+	type Schema<T> = ConfSchema<T>
 
 	type Options<T extends Record<string, any>> = Except<ConfOptions<T>, 'configName' | 'projectName' | 'projectVersion' | 'projectSuffix'> & {
 		/**
@@ -12,8 +12,8 @@ declare namespace ElectronStore {
 
 		@default 'config'
 		*/
-		readonly name?: string;
-	};
+		readonly name?: string
+	}
 }
 
 /**
@@ -50,17 +50,17 @@ declare class ElectronStore<T extends Record<string, any> = Record<string, unkno
 	//=> undefined
 	```
 	*/
-	constructor(options?: ElectronStore.Options<T>);
+	constructor(options?: ElectronStore.Options<T>)
 
 	/**
 	Initializer to set up the required `ipc` communication channels for the module when a `Store` instance is not created in the main process and you are creating a `Store` instance in the Electron renderer process only.
 	*/
-	static initRenderer(): void;
+	static initRenderer(): void
 
 	/**
 	Open the storage file in the user's editor.
 	*/
-	openInEditor(): void;
+	openInEditor(): void
 }
 
-export = ElectronStore;
+export = ElectronStore
