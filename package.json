@@ -29,7 +29,7 @@
 		"zod"
 	],
 	"dependencies": {
-		"conf-with-zod": "^1.0.0",
+		"conf-with-zod": "^1.0.1",
 		"type-fest": "^2.17.0"
 	},
 	"devDependencies": {
@@ -37,5 +37,5 @@
 		"electron": "12.0.4",
 		"execa": "^5.0.0",
 		"tsd": "^0.14.0"
-		}
+	}
 }
