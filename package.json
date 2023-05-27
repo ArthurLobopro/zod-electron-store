@@ -1,6 +1,6 @@
 {
 	"name": "zod-electron-store",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Electron Store with Zod validation",
 	"license": "MIT",
 	"author": "Arthur Lobo",
