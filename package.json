@@ -1,6 +1,6 @@
 {
 	"name": "zod-electron-store",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Electron Store with Zod validation",
 	"license": "MIT",
 	"author": "Arthur Lobo",
@@ -29,7 +29,7 @@
 		"zod"
 	],
 	"dependencies": {
-		"conf-with-zod": "^1.0.4",
+		"conf-with-zod": "^1.0.5",
 		"type-fest": "^2.17.0"
 	},
 	"devDependencies": {
