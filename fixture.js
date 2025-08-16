@@ -1,7 +1,8 @@
-'use strict';
-const assert = require('assert');
-const electron = require('electron');
-const Store = require('.');
+import electron from 'electron';
+import assert from 'node:assert';
+import process from 'node:process';
+import z from "zod";
+import Store from './index.js';
 
 // Prevent Electron from never exiting when an exception happens
 process.on('uncaughtException', error => {
@@ -9,15 +10,13 @@ process.on('uncaughtException', error => {
 	process.exit(1);
 });
 
-const store = new Store({name: 'electron-store'});
+const store = new Store({ name: 'electron-store' });
 
 const storeWithSchema = new Store({
 	name: 'electron-store-with-schema',
-	schema: {
-		foo: {
-			default: 42
-		}
-	}
+	schema: z.object({
+		foo: z.number().default(42)
+	})
 });
 
 store.set('unicorn', '🦄');
