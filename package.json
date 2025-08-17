@@ -1,6 +1,6 @@
 {
 	"name": "zod-electron-store",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "Electron Store with Zod validation",
 	"license": "MIT",
 	"author": "Arthur Lobo",
@@ -10,8 +10,7 @@
 		"prepack": "npm run build"
 	},
 	"files": [
-		"index.js",
-		"index.d.ts"
+		"dist"
 	],
 	"keywords": [
 		"electron",
