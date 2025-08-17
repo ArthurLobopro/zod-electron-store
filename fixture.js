@@ -2,7 +2,7 @@ import electron from 'electron';
 import assert from 'node:assert';
 import process from 'node:process';
 import z from "zod";
-import Store from './index.js';
+import Store from './dist/index.js';
 
 // Prevent Electron from never exiting when an exception happens
 process.on('uncaughtException', error => {

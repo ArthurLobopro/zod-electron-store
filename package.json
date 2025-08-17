@@ -1,11 +1,13 @@
 {
 	"name": "zod-electron-store",
-	"version": "2.0.0",
+	"version": "2.0.1",
 	"description": "Electron Store with Zod validation",
 	"license": "MIT",
 	"author": "Arthur Lobo",
 	"scripts": {
-		"test": "ava && tsd"
+		"test": "npm run build && ava && tsd",
+		"build": "tsc",
+		"prepack": "npm run build"
 	},
 	"files": [
 		"index.js",
@@ -29,24 +31,26 @@
 		"zod"
 	],
 	"dependencies": {
-		"conf-with-zod": "^2.0.0",
-		"type-fest": "^4.41.0",
-		"zod": "^4.0.17"
+		"conf-with-zod": "^2.0.1",
+		"type-fest": "^4.41.0"
 	},
 	"devDependencies": {
 		"ava": "^6.4.0",
 		"electron": "^31.0.1",
 		"execa": "^9.6.0",
-		"tsd": "^0.32.0"
+		"tsd": "^0.32.0",
+		"typescript": "^5.9.2",
+		"zod": "^4.0.17"
 	},
 	"type": "module",
 	"exports": {
 		".": {
-			"import": "./index.js",
-			"require": "./index.js",
-			"types": "./index.d.ts"
+			"import": "./dist/index.js",
+			"require": "./dist/index.js",
+			"types": "./dist/index.d.ts"
 		}
 	},
+	"types": "./dist/index.d.ts",
 	"tsd": {
 		"compilerOptions": {
 			"module": "node16",
